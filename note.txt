@@ -1,0 +1,7 @@
+ - Tạo dự án mới: npx create-reeact-app .
+ - Khởi chạy dữ án: npm start
+ 
+
+
+ - Tạo component: rcc ~ class / rfc ~ function 
+ 

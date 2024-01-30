@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import ClassComponent from "./DemoComponent/ClassComponent";
+import FunctionComponent from "./DemoComponent/FunctionComponent";
+import Ex_Layout from "./Ex_Layout/Ex_Layout";
+import Header from "./Ex_Layout/Header";
+import DataBinding from "./DataBinding/DataBinding";
+import EventHandling from "./EventHandling/EventHandling";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {/* <ClassComponent />
+      <FunctionComponent /> */}
+      {/* <Ex_Layout /> */}
+      {/* <DataBinding/> */}
+      <EventHandling />
     </div>
   );
 }
