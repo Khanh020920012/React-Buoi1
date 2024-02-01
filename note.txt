@@ -5,3 +5,10 @@
 
  - Tạo component: rcc ~ class / rfc ~ function 
  
+ ~ Function 
+
+
+ - DataBinding : Đưa data ( variable , function ) render lên layout thông qua { }
+
+
+ - State : quản lý các data liên quan đến  update layout ( rerender)
