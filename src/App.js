@@ -10,6 +10,8 @@ import DemoState from "./DemoState/DemoState";
 import ConditionalRendering from "./ConditionalRendering/ConditionalRendering";
 import Ex_Car from "./Ex_Car/Ex_Car";
 import RenderWithMap from "./RenderWithMap/RenderWithMap";
+import DemoProps from "./DemoProps/DemoProps";
+import Ex_Shoe from "./Ex_Shoe/Ex_Shoe";
 
 function App() {
   return (
@@ -19,11 +21,15 @@ function App() {
       {/* <Ex_Layout /> */}
       {/* <DataBinding/> */}
       {/* <EventHandling /> */}
-
+      {/* ----{Day 2}---- */}
       {/* <DemoState /> */}
       {/* <ConditionalRendering /> */}
       {/* <Ex_Car /> */}
-      <RenderWithMap/>
+      {/* <RenderWithMap/> */}
+
+      {/* ---{Day--- 3} */}
+      {/* <DemoProps/> */}
+      <Ex_Shoe />
     </div>
   );
 }

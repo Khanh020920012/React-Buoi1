@@ -12,3 +12,5 @@
 
 
  - State : quản lý các data liên quan đến  update layout ( rerender)
+
+ - Props : tương tác ( truyền data) giữa 2 components cha con
