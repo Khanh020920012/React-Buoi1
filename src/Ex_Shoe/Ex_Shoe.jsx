@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import List from "./List";
 import Item from "./Item";
+import Detail from "./Detail";
+import Card from "./Card";
 
 export default class Ex_Shoe extends Component {
   state = {
@@ -146,20 +148,56 @@ export default class Ex_Shoe extends Component {
         image: "http://svcy3.myclass.vn/images/nike-air-max-270-react.png",
       },
     ],
-    detail: {},
+    detail: {
+      id: 1,
+      name: "Adidas Prophere",
+      alias: "adidas-prophere",
+      price: 350,
+      description:
+        "The adidas Primeknit upper wraps the foot with a supportive fit that enhances movement.\r\n\r\n",
+      shortDescription:
+        "The midsole contains 20% more Boost for an amplified Boost feeling.\r\n\r\n",
+      quantity: 995,
+      image: "http://svcy3.myclass.vn/images/adidas-prophere.png",
+    },
+    card: [], // chứa object sau khi user click button add
   };
   handleChangeDetail = (shoe) => {
     this.setState({ detail: shoe });
+  };
+  handleAddToCard = (shoe) => {
+    /**
+     * TH1: sản phẩm chưa có trong giỏ hàng => push ,  và số lượng mặc định là 1
+     * TH2 : sản phẩm đã có trong giỏ hàng => không push , tăng số lượng lên thêm 1 đơn vị
+     */
+    let cloneCard = [...this.state.card];
+    // kiểm tra sản phẩm được thêm có trong giỏ hàng hay chưa
+    let index = cloneCard.findIndex((item) => {
+      return item.id == shoe.id;
+    });
+    console.log("index", index);
+    if (index == -1) {
+      //không tìm thấy => Th1
+      let newShoe = { ...shoe, amount: 1 };
+      cloneCard.push(newShoe);
+    } else {
+      // tìm thấy TH2
+      cloneCard[index].amount++;
+    }
+    this.setState({ card: cloneCard });
   };
   render() {
     return (
       <div>
         Demo Shoe
-        <div>
+        <div className="row w-75">
           <List
             shoeArr={this.state.shoeArr}
             handleViewDetail={this.handleChangeDetail}
+            handleAddToCard={this.handleAddToCard}
           />
+          <Detail shoe={this.state.detail} />
+          <Card card={this.state.card} />
         </div>
       </div>
     );
