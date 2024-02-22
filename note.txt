@@ -1,6 +1,6 @@
  - Tạo dự án mới: npx create-reeact-app .
  - Khởi chạy dữ án: npm start
- 
+ - Chạy redux : npm i redux react-redux
 
 
  - Tạo component: rcc ~ class / rfc ~ function 
@@ -14,3 +14,13 @@
  - State : quản lý các data liên quan đến  update layout ( rerender)
 
  - Props : tương tác ( truyền data) giữa 2 components cha con
+
+
+ --- Redux ---
+ Reducer : viết logic update state 
+
+
+ mapStateToProps : lấy data từ redux về 
+
+
+ mapDispatchToProps : đẩy ddataa lên Redux
