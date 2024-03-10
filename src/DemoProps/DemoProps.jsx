@@ -1,28 +1,25 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import Card from "./Card";
 
-export default class DemoProps extends Component {
-  state = {
-    username: "Iron man",
+export default function DemoProps() {
+  let [username, setName] = useState("iron man");
+  let handelChangeName = (name) => {
+    setName(name);
   };
-  handelChangeName = () => {
-    this.setState({ username: this.state.username == "Super man" ? "Iron man" : "Super man" });
-  };
-  render() {
-    let title = "User Profile";
-    return (
-      <div>
-        <h2>Demo Prop</h2>
-        <Card
-          handleClick={this.handelChangeName}
-          titleCard={title}
-          username={this.state.username}
-          imgSrc={
-            "https://images.hdqwalls.com/wallpapers/zed-league-of-legends-7c.jpg"
-          }
-        />
-      </div>
-    );
-  }
+
+  let title = "User Profile";
+  return (
+    <div>
+      <h2>Demo Prop</h2>
+      <Card
+        handleClick={() => handelChangeName(title)}
+        titleCard={title}
+        username={username}
+        imgSrc={
+          "https://images.hdqwalls.com/wallpapers/zed-league-of-legends-7c.jpg"
+        }
+      />
+    </div>
+  );
 }
 // state ở đâu, setState ở đó

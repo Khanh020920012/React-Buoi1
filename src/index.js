@@ -7,6 +7,7 @@ import { Provider } from "react-redux";
 import { createStore } from "redux";
 import { numberReducer } from "./DemoRedux/redux/reducer";
 import { shoeReducer } from "./Ex_Shoe_Redux/redux/reducer";
+import { BrowserRouter } from "react-router-dom";
 // tạo store
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -17,7 +18,9 @@ const store = createStore(
 
 root.render(
   <Provider store={store}>
-    <App />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </Provider>
 );
 

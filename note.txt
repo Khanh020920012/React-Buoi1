@@ -1,6 +1,7 @@
- - Tạo dự án mới: npx create-reeact-app .
+ - Tạo dự án mới: npx create-react-app .
  - Khởi chạy dữ án: npm start
  - Chạy redux : npm i redux react-redux
+ - npm i -g npx
 
 
  - Tạo component: rcc ~ class / rfc ~ function 

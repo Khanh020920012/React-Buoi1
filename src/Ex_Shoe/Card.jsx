@@ -3,6 +3,7 @@ import React, { Component } from "react";
 export default class Card extends Component {
   render() {
     // let { image, name, price, action } = this.props.data;
+    
 
     console.log(this.props.shoe);
     return (

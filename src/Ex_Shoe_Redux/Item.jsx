@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { ADD_SHOE, VIEW_DETAIL } from "./redux/constant";
+import { addShoeAction, viewDetailAction } from "./redux/action";
 
 class Item extends Component {
   render() {
@@ -31,18 +33,10 @@ class Item extends Component {
 let mapDisPatchToProps = (dispatch) => {
   return {
     handleClickView: (shoe) => {
-      let action = {
-        type: "VIEW_DETAIL",
-        payload: shoe,
-      };
-      dispatch(action);
+      dispatch(viewDetailAction(shoe));
     },
     handleViewCard: (shoe) => {
-      let action = {
-        type: "ADD_SHOE",
-        payload: shoe,
-      };
-      dispatch(action)
+      dispatch(addShoeAction(shoe));
     },
   };
 };

@@ -14,27 +14,43 @@ import DemoProps from "./DemoProps/DemoProps";
 import Ex_Shoe from "./Ex_Shoe/Ex_Shoe";
 import DemoRedux from "./DemoRedux/DemoRedux";
 import Ex_Shoe_Redux from "./Ex_Shoe_Redux/Ex_Shoe_Redux";
+import DemoUseEffect from "./DemoUseEffect/DemoUseEffect";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import UseRouteCustom from "./routes/UseRouteCustom";
+import DemoChiTietProduct from "./DemoUseEffect/DemoChiTietProduct";
 
 function App() {
+  let routes = UseRouteCustom();
   return (
-    <div>
-      {/* <ClassComponent />
-      <FunctionComponent /> */}
-      {/* <Ex_Layout /> */}
-      {/* <DataBinding/> */}
-      {/* <EventHandling /> */}
-      {/* ----{Day 2}---- */}
-      {/* <DemoState /> */}
-      {/* <ConditionalRendering /> */}
-      {/* <Ex_Car /> */}
-      {/* <RenderWithMap/> */}
+    // <div>
+    //   {/* <ClassComponent />
+    //   <FunctionComponent /> */}
+    //   {/* <Ex_Layout /> */}
+    //   {/* <DataBinding/> */}
+    //   {/* <EventHandling /> */}
+    //   {/* ----{Day 2}---- */}
+    //   {/* <DemoState /> */}
+    //   {/* <ConditionalRendering /> */}
+    //   {/* <Ex_Car /> */}
+    //   {/* <RenderWithMap /> */}
 
-      {/* ---{Day--- 3} */}
-      {/* <DemoProps/> */}
-      {/* <Ex_Shoe /> */}
-      {/* <DemoRedux/> */}
-      <Ex_Shoe_Redux />
-    </div>
+    //   {/* ---{Day--- 3} */}
+    //   {/* <DemoProps /> */}
+    //   {/* <Ex_Shoe /> */}
+    //   {/* <DemoRedux/> */}
+    //   {/* <Ex_Shoe_Redux /> */}
+    //   {/* <DemoUseEffect /> */}
+    // </div>
+    routes
+    // <Routes>
+    //   <Route path="/detail" element={<DemoChiTietProduct />}>
+    //     <Route path="dtdd" element={<div>hello dtdd</div>}></Route>
+    //     <Route
+    //       path="dong-ho-deo-tay"
+    //       element={<div>hello đồng hồ</div>}
+    //     ></Route>
+    //   </Route>
+    // </Routes>
   );
 }
 

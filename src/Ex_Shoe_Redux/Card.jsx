@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { deleteShoe } from "./redux/action";
 
 class Card extends Component {
   render() {
@@ -38,7 +39,14 @@ class Card extends Component {
                     <img src={item.image} width={80} alt="" />
                   </td>
                   <td>
-                    <button className="btn btn-success">Delete</button>
+                    <button
+                      onClick={() => {
+                        this.props.handleDeleteShoe(item.id);
+                      }}
+                      className="btn btn-success"
+                    >
+                      Delete
+                    </button>
                   </td>
                 </tr>
               );
@@ -52,4 +60,11 @@ class Card extends Component {
 let mapstateToProps = (state) => {
   return { card: state.card };
 };
-export default connect(mapstateToProps)(Card);
+let mapDispatchToProps = (dispatch) => {
+  return {
+    handleDeleteShoe: (id) => {
+      dispatch(deleteShoe(id));
+    },
+  };
+};
+export default connect(mapstateToProps, mapDispatchToProps)(Card);

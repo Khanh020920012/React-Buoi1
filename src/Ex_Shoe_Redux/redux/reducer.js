@@ -1,3 +1,5 @@
+import { ADD_SHOE, DELETE_SHOE, VIEW_DETAIL } from "./constant";
+
 let initialState = {
   shoeArr: [
     {
@@ -158,11 +160,11 @@ let initialState = {
 
 export let shoeReducer = (state = initialState, action) => {
   switch (action.type) {
-    case "VIEW_DETAIL": {
+    case VIEW_DETAIL: {
       state.detail = action.payload;
       return { ...state };
     }
-    case "ADD_SHOE": {
+    case ADD_SHOE: {
       console.log("yess");
       let cloneCard = [...state.card];
       let index = cloneCard.findIndex((item) => {
@@ -179,6 +181,12 @@ export let shoeReducer = (state = initialState, action) => {
       state.card = cloneCard;
       return { ...state };
     }
+    case DELETE_SHOE: {
+      // từ id => index => splice / filter
+      let newcard = state.card.filter((item) => item.id !== action.payload);
+      return { ...state, card: newcard };
+    }
+
     default:
       return state;
   }
